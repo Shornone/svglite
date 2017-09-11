@@ -14,5 +14,5 @@
 ## Downstream dependencies
 
 * I ran R CMD check on all 8 downstream dependencies (summary at
-  https://github.com/r-lib/svglite/blob/master/revdep/readme.md).
+  https://github.com/r-lib/svglite/tree/release-1.2.1/revdep).
   No problems were found.

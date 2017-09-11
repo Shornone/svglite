@@ -23,16 +23,22 @@
 
 # Revdeps
 
+## Couldn't check (1)
+
+|package                          |version |error  |warning |note |
+|:--------------------------------|:-------|:------|:-------|:----|
+|[DeLorean](problems.md#delorean) |1.2.5   |__+1__ |1       |     |
+
 ## All (8)
 
 |package                              |version |error  |warning |note |
 |:------------------------------------|:-------|:------|:-------|:----|
-|[DeLorean](problems.md#delorean)     |1.2.5   |       |1       |     |
+|[DeLorean](problems.md#delorean)     |1.2.5   |__+1__ |1       |     |
 |[ggExtra](problems.md#ggextra)       |0.7     |       |        |1    |
 |[ggplot2](problems.md#ggplot2)       |2.2.1   |       |        |1    |
 |[mlr](problems.md#mlr)               |2.11    |1      |        |1    |
 |rsvg                                 |1.1     |-1     |        |     |
 |[svgPanZoom](problems.md#svgpanzoom) |0.3.3   |       |        |1    |
-|vdiffr                               |0.2.0   |-1     |        |     |
+|[vdiffr](problems.md#vdiffr)         |0.2.0   |1 -1   |        |     |
 |[viridis](problems.md#viridis)       |0.4.0   |-1     |1       |1    |
 

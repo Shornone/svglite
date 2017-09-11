@@ -2,6 +2,11 @@
 
 Version: 1.2.5
 
+## Newly broken
+
+*   R CMD check timed out
+    
+
 ## In both
 
 *   checking S3 generic/method consistency ... WARNING
@@ -93,6 +98,59 @@ Version: 0.3.3
     ```
     Packages which this enhances but not available for checking:
       ‘gridSVG’ ‘XML’ ‘xml2’
+    ```
+
+# vdiffr
+
+Version: 0.2.0
+
+## Newly fixed
+
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘vdiffr-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: expect_doppelganger
+    > ### Title: Does a figure look like its expected output?
+    > ### Aliases: expect_doppelganger
+    > 
+    > ### ** Examples
+    > 
+    > ver <- gdtools::version_freetype()
+    > 
+    > if (ver >= "2.6.0") {
+    +   disp_hist_base <- function() hist(mtcars$disp)
+    +   expect_doppelganger("disp-histogram-base", disp_hist_base)
+    + }
+    Error in svglite_(file, bg, width, height, pointsize, standalone, aliases) : 
+      function 'gdtools_RcppExport_validate' not provided by package 'gdtools'
+    Calls: expect_doppelganger -> write_svg -> <Anonymous> -> svglite_ -> .Call
+    Execution halted
+    ```
+
+## In both
+
+*   checking tests ...
+    ```
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 13 lines of output:
+      `base_result` inherits from `expectation_failure/expectation/condition/vdiffr_mismatch` not `expectation_success`.
+      
+      
+      3. Failure: ggtitle is set correctly (@test-ggplot.R#8) ------------------------
+      purrr::every(ggplot_results, inherits, "expectation_success") isn't true.
+      
+      
+      testthat results ================================================================
+      OK: 24 SKIPPED: 0 FAILED: 3
+      1. Failure: Doppelgangers pass (@test-expectations.R#24) 
+      2. Failure: Doppelgangers pass (@test-expectations.R#25) 
+      3. Failure: ggtitle is set correctly (@test-ggplot.R#8) 
+      
+      Error: testthat unit tests failed
+      Execution halted
     ```
 
 # viridis
